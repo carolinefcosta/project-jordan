@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    command: sh
+    restart: on_failure
+    
